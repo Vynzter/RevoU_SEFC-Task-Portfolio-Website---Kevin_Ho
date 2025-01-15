@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>My Website</title>
+
+    <script src="script.js" defer></script><!--defer agar file JS dipanggil sebelum HTML, untuk hindari plus div not defined-->
+    
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Logo & Navigation-->
+    <header class="main-header">
+        <!--Logo-->
+        <div class="logo-icon"></div>
+
+        <!--Navigation-->
+        <nav>
+            <a href="#home-page" class="left-rounded">Home</a>
+            <a href="#our-profile">Our Profile</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#our-headquarter">Our Headquarter</a>
+            <a href="#message-us" class="right-rounded">Message Us</a>
+        </nav>
+
+    </header>
+    
+    <!--Main Content-->
+    <main>
+        <!--Home Page-->
+        <section>
+            <!--Title-->
+            <header>
+                <h1>Hi <span id="user-greeting">User</span>, Welcome to our website</h1>
+            <p>This is my first training website</p>
+            </header>
+
+            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=1"></div>
+            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=2"></div>
+            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=3"></div>
+            
+            <button onclick ="plusDivs(-1)">Previous</button>
+            <button onclick ="plusDivs(1)">Next</button>
+        </section>
+        <hr/>
+
+        <!--Our Profile-->
+        <section>
+            <!--Title-->
+            <header id="our-profile">
+                <h1>Our Profile</h1>
+            </header>
+
+            <div class="banner-image"></div>
+        </section>
+        <hr/>
+
+         <!--Portofolio-->
+         <section>
+            <!--Title-->
+            <header id="portofolio">
+                <h1>Portofolio</h1>
+            </header>
+
+            <div class="content"></div>
+        </section>
+
+    <hr/>
+
+        <!--Our Headquarter-->
+        <section>
+            <!--Title-->
+            <header class id="our-headquarter">
+                <h1>Our Headquarter</h1>
+                
+            <!--Logo Headquarter-->
+            
+            <nav class="logo-container">
+                
+                <div class="logo-item">
+                    <div class="logo-hq1"></div>
+                    <div class="logo-hq-text">Jakarta</div>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-hq1"></div>
+                    <div class="logo-hq-text">Bandung</div>
+                </div>
+                
+                <div class="logo-item">
+                    <div class="logo-hq1"></div>
+                    <div class="logo-hq-text">Medan</div>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-hq1"></div>
+                    <div class="logo-hq-text">Denpasar</div>
+                </div>
+                
+            </nav>    
+        </header>
+
+            
+        </section>
+
+    <hr/>
+
+         <!--Message Us-->
+         <section>
+            <!--Title-->
+            <header id="message-us">
+                <h1>Message Us</h1>
+            </header>
+            
+                <!--<div id="Nama"></div>-->
+                <p>Nama         :</p>
+                <p>Tanggal Lahir:</p>
+                <p>Jenis Kelamin:</p>
+                <p>Pesan        :</p>
+            
+
+        </section>
+
+    </main>
+
+    <hr/>
+    
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 - All Right Reserved</p> 
+    </footer>
+
+    <footer class="created-by">
+        <h5>Created By : KEVIN HO</h5>
+    </footer>
+    <hr/>
+
+</body>
+
+</html>
