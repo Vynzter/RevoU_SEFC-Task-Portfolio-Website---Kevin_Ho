@@ -1,54 +1,47 @@
 /*ini file css*/
 
+/* Header utama */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
     padding: 16px 24px;
+   
 }
 
-@media only screen and (max-width:600px) {
-    .main-header {
-        flex-direction: column;
-    }
-    .nav {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .logo-icon {
-        margin-bottom: 14px;
-    }
-}
-    
-
+/*logo icon profile*/
 .logo-icon {
     border-radius: 50%;
     height: 50px;
     width: 50px;
     background-image: url(https://picsum.photos/200);
     background-size: cover;
+    cursor: pointer;/* Agar logo bisa diklik */
 }
 
-nav {
+/* Navigasi default (untuk layar besar) */
+.main-menu {
     display: flex;
     flex-wrap: wrap;
+
 }
 
+/* Gaya tombol navigasi */
+nav>a {
+    border: 1px solid black;
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Efek rounded pada tombol */
 .left-rounded {
     border-radius: 12px 0 0 12px;
 }
 
 .right-rounded {
     border-radius: 0 12px 12px 0;
-}
-
-nav>a {
-    border: 1px solid black;
-    padding: 8px;
-    color: black;
-    text-decoration: none;
 }
 
 .banner-image {
@@ -65,6 +58,19 @@ nav>a {
 }
 
 /*tombol navigasi*/
+
+.div-button {
+    border: 1px solid black;
+    padding: 8px 16px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.div-button:hover {
+    background-color: lightgray;
+}
 
 .prev, .next {
     cursor: pointer;
@@ -86,9 +92,25 @@ nav>a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.content {
-    /*Opsional*/
-    height: 500px; 
+/* Navigasi di layar kecil (disembunyikan) */
+@media only screen and (max-width:600px) {
+    .main-header {
+        flex-direction: column;
+    }
+    
+    .main-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        top: 60px; /* Jarak dari atas */
+        background-color: white;
+        border: 1px solid black;
+        border: none;
+    }
+
+    .logo-icon {
+        margin-bottom: 14px;
+    }
 }
 
 /*bagian baris our headquarter*/
@@ -134,4 +156,9 @@ footer {
 .created-by {
     text-align: right;
     font-family: math;
+}
+
+/*Opsional*/
+.content {
+    height: 500px; 
 }

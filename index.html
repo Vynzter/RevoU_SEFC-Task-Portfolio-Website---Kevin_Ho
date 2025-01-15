@@ -16,17 +16,16 @@
     <!--Logo & Navigation-->
     <header class="main-header">
         <!--Logo-->
-        <div class="logo-icon"></div>
+        <div class="logo-icon" onclick="toggleMenu()"></div>
 
-        <!--Navigation-->
-        <nav>
-            <a href="#home-page" class="left-rounded">Home</a>
-            <a href="#our-profile">Our Profile</a>
-            <a href="#portofolio">Portofolio</a>
-            <a href="#our-headquarter">Our Headquarter</a>
-            <a href="#message-us" class="right-rounded">Message Us</a>
-        </nav>
-
+         <!-- Navigation -->
+        <div class="main-menu">
+        <button class="div-button" onclick="location.href='#home-page'">Home</button>
+        <button class="div-button" onclick="location.href='#our-profile'">Our Profile</button>
+        <button class="div-button" onclick="location.href='#portofolio'">Portfolio</button>
+        <button class="div-button" onclick="location.href='#our-headquarter'">Our Headquarter</button>
+        <button class="div-button" onclick="location.href='#message-us'">Message Us</button>
+        </div>
     </header>
     
     <!--Main Content-->
@@ -42,6 +41,10 @@
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=1"></div>
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=2"></div>
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=3"></div>
+            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=4"></div>
+            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=5"></div>
+
+            <br/>
             
             <button onclick ="plusDivs(-1)">Previous</button>
             <button onclick ="plusDivs(1)">Next</button>
