@@ -33,8 +33,23 @@ setInterval(nextBanner, 3000); //Auto-slide every 3 seconds
 
 console.log('Hello World!');
 
+// Function to set today's date as the placeholder for the birthdate input
+function setTodayAsDefault() {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const dd = String(today.getDate()).padStart(2, '0');
+    const formattedDate = `${yyyy}-${mm}-${dd}`; // Format YYYY-MM-DD
+
+    document.getElementById('birthdate-input').value = formattedDate;// Set value, not placeholder
+}
+// Call the function to set the placeholder when the page loads
+window.onload = setTodayAsDefault;
+
 // Function to validate form data
-function formValidation() {
+function formValidation(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+    
     let nameInput = document.getElementById('name-input').value;
     let birthdateInput = document.getElementById('birthdate-input').value;
     let genderInput = document.querySelector('input[name="gender"]:checked');
@@ -48,12 +63,16 @@ function formValidation() {
     // Format waktu sesuai contoh (Fri Jun 17 2022 11:27:28 GMT+0700)
     let currentTime = new Date().toString();
 
+    // Format the birthdate as dd/mm/yyyy
+    const birthdate = new Date(birthdateInput);
+    const formattedBirthdate = `${String(birthdate.getDate()).padStart(2, '0')}/${String(birthdate.getMonth() + 1).padStart(2, '0')}/${birthdate.getFullYear()}`;
+    
         // Display result in result-form box
         document.getElementById('result-form').style.display = 'block';
         document.getElementById ('result-form').innerHTML = `
             <strong>Current Time:</strong> ${currentTime} <br><br>
             <strong>Name:</strong> ${nameInput} <br>
-            <strong>Birthdate:</strong> ${birthdateInput} <br>
+            <strong>Birthdate:</strong> ${formattedBirthdate} <br>
             <strong>Gender:</strong> ${genderInput.value} <br>
             <strong>Message:</strong> ${messageInput}
         `;
@@ -63,8 +82,11 @@ function formValidation() {
         if (greetingElement) {
         greetingElement.textContent = nameInput;
     }
-        // Reset form setelah submit
+        // Reset form after submit
         document.getElementById("messageForm").reset();
+
+        // Set birthdate input back to today's date
+        setTodayAsDefault();
     } 
     // add event listener to form
     document.getElementById('submit-btn').addEventListener('click', formValidation);

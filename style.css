@@ -167,14 +167,38 @@ nav>a {
 
 /*Form Message Us*/
 .form-container {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-/*form input biodata sblh kiri*/
+/*input biodata at messageForm (left side)*/
 form {
     width: 45%;
+}
+
+.form-group {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    width: 30%;
+    margin-right: 10px;
+    text-align: right;
+    display: inline-flex;
+    position: relative;
+}
+
+.form-group label:after {
+    content: ":"; /* Add auto colon(:) sign after label*/
+    position: absolute;
+    right: 0;
+}
+
+.form-group input:not([type="radio"]), .form-group textarea {
+    flex: 1;
 }
 
 input, textarea {
@@ -199,19 +223,38 @@ input, textarea {
 }
 
 .gender-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;   
+    display: inline-flex;
+    align-items: center;   
 }
 
-/*form hasil input data (sblh kanan)*/
+.gender-container input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender-container label {
+    margin-right: 15px;
+}
+
+/*submit result at resultform (right side)*/
 .message-box {
     width: 45%;
     display: flex;
-    margin-top: 20px;
+    flex-direction:column;
+    margin-top: 5px;
     padding: 15px;
     border: 1px solid #ccc;
     background: #f9f9f9;   
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.result-item strong::after {
+    content: ":"; /* Add auto colon(:) sign after label*/
+    margin-left: 5px;
 }
 
 /*footer*/

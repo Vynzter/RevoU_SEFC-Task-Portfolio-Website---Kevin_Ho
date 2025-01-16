@@ -44,8 +44,10 @@
 
             <br/>
 
-            <button onclick="nextBanner(-1)">Slide Previous</button>
-            <button onclick="nextBanner(1)">Slide Next</button>
+            <button onclick="nextBanner(-1)">Previous</button>
+            <button onclick="nextBanner(1)">Next</button>
+
+            <br/>
             
             //////////////////////////
 
@@ -113,9 +115,7 @@
                 </div>
                 
             </nav>    
-        </header>
-
-            
+        </header>      
         </section>
 
     <hr/>
@@ -126,30 +126,37 @@
             <header id="message-us">
                 <h1>Message Us</h1>
             </header>
-            
             <div class="form-container">
                 <!--Form Biodata-->
                 <form action="" id="messageForm">
-                    <label for="name-input">Name:</label>
-                    <input type="text" name="name" id="name-input" placeholder="Enter your name" required>
-                    
-                    <label for="birth-date">Birth Date:</label>
-                    <input type="date" name="date" id="birth-date" placeholder="Enter birth date" required>
-
-                    <label>Jenis Kelamin:</label>
-                    <div class="gender-container">
-                        <input type="radio" id="male" name="gender" value="Laki-Laki" required>
-                        <label for="male">Laki-Laki</label>
-                        <input type="radio" id="female" name="gender" value="Laki-Laki" required>
-                        <label for="female">Perempuan</label>
+                    <div class="form-group">
+                        <label for="name-input">Name</label>
+                        <input type="text" name="name" id="name-input" placeholder="Enter your name" required>
                     </div>
 
-                    <label for="message">Pesan:</label>
-                    <textarea id="message" rows="4" required></textarea>
-                    
-                    <button type="button" id="submit-btn">Submit</button>
+                    <div class="form-group">
+                        <label for="birthdate-input">Birth Date</label>
+                        <input type="date" name="birthdate" id="birthdate-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="gender-container">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-input">Message</label>
+                        <textarea name="message" id="message-input" rows="4" placeholder="Please enter your message" required></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
                 </form>
-                <div id="result-form"></div>
+                <div id="result-form" class="message-box"></div>
             </div>
         </section>
 
