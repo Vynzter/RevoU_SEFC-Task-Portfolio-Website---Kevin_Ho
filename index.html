@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
     <title>My Website</title>
 
     <script src="script.js" defer></script><!--defer agar file JS dipanggil sebelum HTML, untuk hindari plus div not defined-->
@@ -21,7 +22,9 @@
          <!-- Navigation -->
         <div class="main-menu">
         <button class="div-button" onclick="location.href='#home-page'">Home</button>
+        <button class="div-button" onclick="location.href='#about-us'">About Us</button>
         <button class="div-button" onclick="location.href='#our-profile'">Our Profile</button>
+        <button class="div-button" onclick="location.href='#vision-mission'">Vision & Mission</button>
         <button class="div-button" onclick="location.href='#portofolio'">Portfolio</button>
         <button class="div-button" onclick="location.href='#our-headquarter'">Our Headquarter</button>
         <button class="div-button" onclick="location.href='#message-us'">Message Us</button>
@@ -34,13 +37,17 @@
         <section>
             <!--Title-->
             <header>
+                <h1 class="vynzlogo">Vynz & Co. Patisserie</h1>
                 <h1>Hi <span id="user-greeting">User</span>, Welcome to our website</h1>
-            <p>This is my first training website</p>
+            
+                <p class="pastry">Indulge in the art of fine pastries and delightful confections. We craft every treat with passion, using the finest ingredients to bring you an unforgettable taste experience.</p>
             </header>
 
             <div class="banner-image banner-image-1"></div>
             <div class="banner-image banner-image-2"></div>
             <div class="banner-image banner-image-3"></div>
+            <div class="banner-image banner-image-4"></div>
+            <div class="banner-image banner-image-5"></div>
 
             <br/>
 
@@ -49,16 +56,17 @@
 
             <br/>
             
-            //////////////////////////
+        </section>
+        <hr/>
 
-            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=1"></div>
-            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=2"></div>
-            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=3"></div>
+        <!--About Us-->
+        <section>
+            <!--Title-->
+            <header id="about-us">
+                <h1>About Us</h1>
+                <p class="pastry">Founded in 2017, Vynz & Co. Patisserie started with a simple dream—to share our love for fine pastries with the world. Over the years, we have grown into a beloved bakery, known for our commitment to quality, creativity, and authenticity.</p>
+            </header>
 
-            <br/>
-            
-            <button onclick ="plusDivs(-1)">Previous</button>
-            <button onclick ="plusDivs(1)">Next</button>
         </section>
         <hr/>
 
@@ -67,29 +75,48 @@
             <!--Title-->
             <header id="our-profile">
                 <h1>Our Profile</h1>
+                <p class="pastry">At Vynz & Co. Patisserie, we specialize in creating exquisite pastries, cakes, and desserts that captivate both the eyes and the palate. Our team of talented pastry chefs is dedicated to delivering the highest quality baked goods, blending traditional techniques with modern innovation.</p>
             </header>
-
-            <div class="banner-image"></div>
         </section>
         <hr/>
 
-         <!--Portofolio-->
-         <section>
+        <!--Vision & Mission-->
+        <section>
+            <!--Title-->
+            <header id="vision-mission">
+                <h1>Vision & Mission</h1>
+                <p class="pastry">Our vision is to be the leading patisserie in the region, known for our exceptional quality, creativity, and customer service. We are committed to delighting our customers with every bite, and to creating a warm, welcoming environment where everyone feels at home.</p>
+                
+                <br>
+                <p class="pastry">Our Mission:</p>
+                <p class="pastry">* To craft high-quality pastries with premium ingredients.</p>
+                <p class="pastry">* To innovate and introduce new flavors while preserving classic recipes.</p>
+                <p class="pastry">* To provide exceptional service and create memorable experiences for our customers.</p>
+            </header>
+
+        </section>
+        <hr/>
+
+        <!--Portofolio-->
+        <section>
             <!--Title-->
             <header id="portofolio">
                 <h1>Portofolio</h1>
-            </header
+                <p class="pastry">Our creations speak for themselves. From elegant wedding cakes to delicate French pastries, our portfolio showcases our passion for the art of baking. Browse through our finest works and find inspiration for your next sweet indulgence.</p>
+            </header>
 
-            <div class="content"></div>
+            <div class="content">
+                <div class="banner-foodbg"></div>
+            </div>
         </section>
-
-    <hr/>
+        <hr/>
 
         <!--Our Headquarter-->
         <section>
             <!--Title-->
             <header class id="our-headquarter">
                 <h1>Our Headquarter</h1>
+                <p class="pastry">Our patisserie is proudly based in Jakarta, with additional locations in:</p>
                 
             <!--Logo Headquarter-->
             <nav class="logo-container">
@@ -113,8 +140,8 @@
                     <div class="logo-hq1"></div>
                     <div class="logo-hq-text">Denpasar</div>
                 </div>
-                
             </nav>    
+                <p class="pastry">Visit us and experience the magic of our handcrafted pastries!</p>
         </header>      
         </section>
 
@@ -166,12 +193,8 @@
     <!--Footer-->
     <footer>
         <p>&copy; 2025 - All Right Reserved</p> 
-    </footer>
-
-    <footer class="created-by">
         <h5>Created By : KEVIN HO</h5>
     </footer>
-    <hr/>
 
 </body>
 </html>

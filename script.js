@@ -27,7 +27,7 @@ function changeBackground() {
     }
     bannerList[indexBanner].style.display = 'block';
 }
-setInterval(nextBanner, 3000); //Auto-slide every 3 seconds
+//setInterval(nextBanner, 3000); //Auto-slide every 3 seconds
 
 //Message Us
 
