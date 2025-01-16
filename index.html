@@ -38,11 +38,20 @@
             <p>This is my first training website</p>
             </header>
 
+            <div class="banner-image banner-image-1"></div>
+            <div class="banner-image banner-image-2"></div>
+            <div class="banner-image banner-image-3"></div>
+
+            <br/>
+
+            <button onclick="nextBanner(-1)">Slide Previous</button>
+            <button onclick="nextBanner(1)">Slide Next</button>
+            
+            //////////////////////////
+
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=1"></div>
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=2"></div>
             <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=3"></div>
-            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=4"></div>
-            <div><img class="img-slideshow" src="https://picsum.photos/500/300?random=5"></div>
 
             <br/>
             
@@ -67,7 +76,7 @@
             <!--Title-->
             <header id="portofolio">
                 <h1>Portofolio</h1>
-            </header>
+            </header
 
             <div class="content"></div>
         </section>
@@ -81,7 +90,6 @@
                 <h1>Our Headquarter</h1>
                 
             <!--Logo Headquarter-->
-            
             <nav class="logo-container">
                 
                 <div class="logo-item">
@@ -119,17 +127,33 @@
                 <h1>Message Us</h1>
             </header>
             
-                <!--<div id="Nama"></div>-->
-                <p>Nama         :</p>
-                <p>Tanggal Lahir:</p>
-                <p>Jenis Kelamin:</p>
-                <p>Pesan        :</p>
-            
+            <div class="form-container">
+                <!--Form Biodata-->
+                <form action="" id="messageForm">
+                    <label for="name-input">Name:</label>
+                    <input type="text" name="name" id="name-input" placeholder="Enter your name" required>
+                    
+                    <label for="birth-date">Birth Date:</label>
+                    <input type="date" name="date" id="birth-date" placeholder="Enter birth date" required>
 
+                    <label>Jenis Kelamin:</label>
+                    <div class="gender-container">
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="Laki-Laki" required>
+                        <label for="female">Perempuan</label>
+                    </div>
+
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" rows="4" required></textarea>
+                    
+                    <button type="button" id="submit-btn">Submit</button>
+                </form>
+                <div id="result-form"></div>
+            </div>
         </section>
 
     </main>
-
     <hr/>
     
     <!--Footer-->
@@ -143,5 +167,4 @@
     <hr/>
 
 </body>
-
 </html>

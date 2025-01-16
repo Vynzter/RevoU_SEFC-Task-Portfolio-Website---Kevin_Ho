@@ -46,10 +46,26 @@ nav>a {
 
 .banner-image {
     height: 450px;
-    background-image: url(https://picsum.photos/1000);
+    
     background-size: cover;
     background-position: center;
+    width: 100%;
 }
+
+.banner-image-1 {
+    background-image: url(https://picsum.photos/501);
+}
+
+.banner-image-2 {
+    background-image: url(https://picsum.photos/502);
+    display: none;
+}
+
+.banner-image-3 {
+    background-image: url(https://picsum.photos/503);
+    display: none;
+}
+
 
 /*slideshow gambar banner*/
 .img-slideshow {
@@ -149,6 +165,56 @@ nav>a {
     color: #FF5722;
 }
 
+/*Form Message Us*/
+.form-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*form input biodata sblh kiri*/
+form {
+    width: 45%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;   
+}
+
+/*form hasil input data (sblh kanan)*/
+.message-box {
+    width: 45%;
+    display: flex;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;   
+}
+
+/*footer*/
 footer {
     text-align: center;
 }
